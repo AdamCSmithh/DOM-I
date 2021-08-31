@@ -43,6 +43,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 //Nav bar selectors
+const nav = document.querySelector('nav');
 const nav1 = document.querySelector('nav a');
 const nav2 = nav1.nextElementSibling;
 const nav3 = nav2.nextElementSibling;
@@ -74,6 +75,7 @@ const footer = document.querySelector("footer p");
 
 
 //Nav section
+
 nav1.textContent = siteContent['nav']['nav-item-1'];
 nav2.textContent = siteContent['nav']['nav-item-2'];
 nav3.textContent = siteContent['nav']['nav-item-3'];
@@ -81,6 +83,20 @@ nav4.textContent = siteContent['nav']['nav-item-4'];
 nav5.textContent = siteContent['nav']['nav-item-5'];
 nav6.textContent = siteContent['nav']['nav-item-6'];
 navImg.src = siteContent["nav"]["img-src"];
+nav1.setAttribute("style", "color: green");
+nav2.setAttribute("style", "color: green");
+nav3.setAttribute("style", "color: green");
+nav4.setAttribute("style", "color: green");
+nav5.setAttribute("style", "color: green");
+nav6.setAttribute("style", "color: green");
+const extraNav = nav1.cloneNode(true);
+const extraNav2 = nav1.cloneNode(true);
+document.querySelector("nav").appendChild(extraNav);
+extraNav.textContent = "Shop"
+document.querySelector("nav").prepend(extraNav2);
+extraNav2.textContent = "Our Mission"
+
+
 
 //Call to Action section
 ctaH1.textContent = siteContent["cta"]["h1"];
